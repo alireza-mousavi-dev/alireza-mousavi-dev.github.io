@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alireza Mousavi | Personal Website</title>
+
+    <style>
+
+        /* General */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #0B1120;
+            color: #E2E8F0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .main-container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Navbar */
+
+        nav {
+            background-color: #111C30;
+            border: 1px solid #26364F;
+            border-radius: 14px;
+            padding: 18px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #38BDF8;
+            font-size: 19px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #CBD5E1;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38BDF8;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 120px 35px 110px;
+        }
+
+        .hero-label {
+            color: #38BDF8;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.2;
+            max-width: 700px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            color: #38BDF8;
+            font-size: 22px;
+            font-weight: normal;
+        }
+
+        .hero p {
+            color: #94A3B8;
+            font-size: 17px;
+            line-height: 1.9;
+            max-width: 570px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 25px;
+
+            background-color: #38BDF8;
+            color: #0B1120;
+
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: #7DD3FC;
+            transform: translateY(-3px);
+        }
+
+        /* Section Titles */
+
+        .section-label {
+            color: #38BDF8;
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 30px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        /* About */
+
+        .about {
+            background-color: #111C30;
+            border: 1px solid #26364F;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 85px;
+        }
+
+        .about-intro {
+            color: #94A3B8;
+            line-height: 2;
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0;
+        }
+
+        .about-more {
+            display: inline;
+        }
+
+        .about-more summary {
+            display: inline;
+            list-style: none;
+            color: #38BDF8;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .about-more summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .about-more summary:hover {
+            color: #7DD3FC;
+        }
+
+        .about-more[open] summary {
+            display: none;
+        }
+
+        .about-extra {
+            display: inline;
+        }
+
+        /* Skills */
+
+        .skills {
+            margin-bottom: 90px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-card {
+            background-color: #111C30;
+            border: 1px solid #26364F;
+            border-radius: 12px;
+
+            padding: 16px 22px;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            min-width: 145px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: #38BDF8;
+            background-color: #172941;
+            transform: translateY(-4px);
+        }
+
+        .skill-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .skill-card span {
+            font-weight: bold;
+        }
+
+        /* Projects */
+
+        .projects {
+            margin-bottom: 100px;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .project-card {
+            background-color: #111C30;
+            border: 1px solid #26364F;
+            border-radius: 15px;
+
+            padding: 28px;
+            width: 320px;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #38BDF8;
+            transform: translateY(-5px);
+        }
+
+        .project-number {
+            color: #38BDF8;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .project-card h3 {
+            font-size: 21px;
+            margin-top: 18px;
+        }
+
+        .project-card p {
+            color: #94A3B8;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .project-tags {
+            color: #38BDF8;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+
+        /* Contact */
+
+        .contact {
+            background-color: #111C30;
+            border: 1px solid #26364F;
+            border-radius: 18px;
+
+            padding: 55px 25px;
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .contact h2 {
+            font-size: 32px;
+            margin-top: 12px;
+        }
+
+        .contact p {
+            color: #94A3B8;
+            line-height: 1.8;
+            max-width: 550px;
+            margin: 15px auto;
+        }
+
+        /* Social Links */
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .social-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+
+            color: #CBD5E1;
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .social-icon-box {
+            width: 58px;
+            height: 58px;
+
+            background-color: #1E293B;
+            border: 1px solid #334155;
+            border-radius: 15px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.3s;
+        }
+
+        .social-icon-box img {
+            width: 27px;
+            height: 27px;
+        }
+
+        .social-item:hover {
+            color: #38BDF8;
+            transform: translateY(-5px);
+        }
+
+        .social-item:hover .social-icon-box {
+            border-color: #38BDF8;
+            background-color: #253B55;
+        }
+
+        .social-item span {
+            font-size: 13px;
+        }
+
+        .social-disabled {
+            opacity: 0.45;
+            cursor: default;
+        }
+
+        .social-disabled:hover {
+            color: #CBD5E1;
+            transform: none;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            color: #64748B;
+            font-size: 13px;
+            padding: 25px;
+            border-top: 1px solid #26364F;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 650px) {
+
+            body {
+                padding: 15px;
+            }
+
+            nav {
+                padding: 18px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 85px 10px;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .about {
+                padding: 25px;
+            }
+
+            .project-card {
+                width: 100%;
+            }
+
+            .contact {
+                padding: 40px 15px;
+            }
+
+            .social-links {
+                gap: 25px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- Navbar -->
+
+    <nav id="home">
+
+        <div class="logo">
+            ALIREZA MOUSAVI
+        </div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-label">
+            HELLO, I'M ALIREZA
+        </div>
+
+        <h1>Curiosity Turns Into Creation.</h1>
+
+        <h2>Computer Science Student</h2>
+
+        <p>
+            I'm passionate about programming, technology,
+            and creating things that make a difference.
+        </p>
+
+        <a class="hero-button" href="#projects">
+            Explore My Work →
+        </a>
+
+    </section>
+
+    <!-- About -->
+
+    <section class="about" id="about">
+
+        <div class="section-label">WHO I AM</div>
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-intro">
+            I'm Alireza, a Computer Science student passionate
+            about technology, programming, and exploring new ideas.
+            I enjoy learning how things work, solving problems,
+            and turning curiosity into creativity.
+            <details class="about-more">
+
+                <summary>Read More</summary>
+
+                <span class="about-extra">
+                    My interest in technology goes beyond simply
+                    writing code. I'm curious about how digital
+                    systems work, how ideas become reality, and
+                    how technology can shape the future.
+
+                    Currently, I'm developing my skills in Python,
+                    HTML, and CSS while building a stronger
+                    foundation in computer science.
+
+                    I believe growth comes from curiosity,
+                    consistency, and the willingness to explore
+                    the unknown. Every project and every challenge
+                    is another step forward in my journey.
+
+                    This website is where I share that journey,
+                    showcase my work, and document what I create
+                    along the way.
+                </span>
+
+            </details>
+        </div>
+
+    </section>
+
+    <!-- Skills -->
+
+    <section class="skills">
+
+        <div class="section-label">WHAT I KNOW</div>
+
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+
+                <img class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML">
+
+                <span>HTML</span>
+
+            </div>
+
+            <div class="skill-card">
+
+                <img class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS">
+
+                <span>CSS</span>
+
+            </div>
+
+            <div class="skill-card">
+
+                <img class="skill-icon"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python">
+
+                <span>Python</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+
+    <section class="projects" id="projects">
+
+        <div class="section-label">WHAT I'VE BUILT</div>
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+
+                <div class="project-number">PROJECT 01</div>
+
+                <h3>Personal Website</h3>
+
+                <p>
+                    A personal website built with HTML and CSS
+                    to showcase my skills, interests, and projects.
+                </p>
+
+                <div class="project-tags">
+                    HTML / CSS
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-label">LET'S CONNECT</div>
+
+        <h2>Get In Touch</h2>
+
+        <p>
+            Have an idea, a project, or just want to say hello?
+            Feel free to reach out.
+        </p>
+
+        <div class="social-links">
+
+            <!-- LinkedIn -->
+
+            <div class="social-item social-disabled">
+
+                <div class="social-icon-box">
+
+                    <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                    alt="LinkedIn">
+
+                </div>
+
+                <span>LinkedIn</span>
+
+            </div>
+
+            <!-- Instagram -->
+
+            <a class="social-item"
+            href="https://www.instagram.com/alireza_mousavi29/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                <div class="social-icon-box">
+
+                    <img
+                    src="https://cdn.simpleicons.org/instagram/E4405F"
+                    alt="Instagram">
+
+                </div>
+
+                <span>Instagram</span>
+
+            </a>
+
+            <!-- Telegram -->
+
+            <a class="social-item"
+            href="https://t.me/Alireza_486"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                <div class="social-icon-box">
+
+                    <img
+                    src="https://cdn.simpleicons.org/telegram/26A5E4"
+                    alt="Telegram">
+
+                </div>
+
+                <span>Telegram</span>
+
+            </a>
+
+            <!-- Gmail -->
+
+            <a class="social-item"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=alireza.m1386.34@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer">
+
+                <div class="social-icon-box">
+
+                    <img
+                    src="https://cdn.simpleicons.org/gmail/EA4335"
+                    alt="Gmail">
+
+                </div>
+
+                <span>Gmail</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Alireza Mousavi. All Rights Reserved.
+
+    </footer>
+
+</div>
+
+</body>
+</html>
